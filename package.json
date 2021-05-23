@@ -1,0 +1,33 @@
+{
+  "name": "book-it",
+  "version": "1.0.0",
+  "description": "MERN HW",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "if-env": "^1.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaylaStevenson/book-it.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShaylaStevenson/book-it/issues"
+  },
+  "homepage": "https://github.com/ShaylaStevenson/book-it#readme"
+}
