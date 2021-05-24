@@ -39,6 +39,7 @@ function Saved() {
                         {book.description}
                       </li>
                       <li>
+                        image:
                         {book.image}
                       </li>
                       <li>
