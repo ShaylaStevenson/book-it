@@ -1,6 +1,9 @@
 {
   "name": "book-it",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.15.5"
+  },
   "description": "MERN HW",
   "main": "server.js",
   "scripts": {
