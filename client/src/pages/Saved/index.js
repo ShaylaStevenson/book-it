@@ -18,6 +18,13 @@ function Saved() {
         )
         .catch(err => console.log(err));
     };
+
+    // Deletes a book from the database with a given id, then reloads books from the db
+    function deleteBook(id) {
+      API.deleteBook(id)
+        .then(res => loadBooks())
+        .catch(err => console.log(err));
+    }
   
     return (
       <div className="container-fluid">
@@ -45,6 +52,9 @@ function Saved() {
                       <li>
                         {book.link}
                       </li>
+                      <div className="cardFooter">
+                        <button onClick={() => deleteBook(book._id)}>Remove</button>
+                      </div>
                     </div>
                   );
               })}
