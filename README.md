@@ -165,3 +165,4 @@ If you have any questions about this project or the material we have covered, pl
 
 **Good Luck!**
 
+"heroku-postbuild": "npm run build",
