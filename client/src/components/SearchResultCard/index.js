@@ -1,23 +1,16 @@
 import React from "react";
-// const {google} = require('googleapis');
+import "./style.css";
 
 function SearchResultCard(props) {
   return (
-    <div className="card">
-        <h4 className="list-group-item" key={props.id}>
-          {/* <img alt={result.title} className="img-fluid" src={result.images.original.url} /> */}
-          {props.title} by {props.author}
-        </h4>
+    <div className="card" key={props.id}>
+      <h4>{props.title}</h4>
+      <p><strong>By {props.author}</strong></p>
+      <img alt={props.title} className="book-image" src={props.image} />
+      <p>{props.description}</p>
+      <a href={props.link}> Buy Book </a>
     </div>
   );
 }
 
 export default SearchResultCard;
-
-// blogger.blogs.get(params)
-//   .then(res => {
-//     console.log(`The blog url is ${res.data.url}`);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
