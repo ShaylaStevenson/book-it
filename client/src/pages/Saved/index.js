@@ -9,30 +9,30 @@ class Saved extends Component {
     savedBooks: []
   };
 
-  componentDidMount() {
-    API.getBooks()
-    .then((res) => {
-      this.setState({ savedBooks: res.data})
-      console.log(res)
-      console.log(this.state.savedBooks)
-    })
-    .catch(err => console.log(err));
-  };
+  // componentDidMount() {
+  //   API.getBooks()
+  //   .then((res) => {
+  //     this.setState({ savedBooks: res.data})
+  //     console.log(res)
+  //     console.log(this.state.savedBooks)
+  //   })
+  //   .catch(err => console.log(err));
+  // };
 
-  deleteBook = id => {
-    API.deleteBook(id)
-    .then(console.log("book deleted"))
-    .catch(err => console.log(err));
+  // deleteBook = id => {
+  //   API.deleteBook(id)
+  //   .then(console.log("book deleted"))
+  //   .catch(err => console.log(err));
 
-    API.getBooks()
-    .then((res) => {
-      this.setState({ savedBooks: res.data})
-      console.log(res)
-      console.log(this.state.savedBooks)
-    })
-    .catch(err => console.log(err));
+  //   API.getBooks()
+  //   .then((res) => {
+  //     this.setState({ savedBooks: res.data})
+  //     console.log(res)
+  //     console.log(this.state.savedBooks)
+  //   })
+  //   .catch(err => console.log(err));
 
-  };
+  // };
 
   render() {
     return(

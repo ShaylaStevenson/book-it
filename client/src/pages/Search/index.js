@@ -10,20 +10,20 @@ class Search extends Component {
     search: "",
   };
 
-  componentDidMount() {
-    // When this component mounts, search the Google Books API for ...
-    this.searchForBooks("zebras");
-  };
+  // componentDidMount() {
+  //   // When this component mounts, search the Google Books API for ...
+  //   this.searchForBooks("zebras");
+  // };
 
-  searchForBooks = query => {
-    API.searchBooks(query)
-      .then((res) => {
-        this.setState({ searchResults: res.data.items })
-        console.log(res)
-        console.log(this.state.searchResults)
-      })
-      .catch(err => console.log(err));
-      };
+  // searchForBooks = query => {
+  //   API.searchBooks(query)
+  //     .then((res) => {
+  //       this.setState({ searchResults: res.data.items })
+  //       console.log(res)
+  //       console.log(this.state.searchResults)
+  //     })
+  //     .catch(err => console.log(err));
+  //     };
 
   // Handles updating component state when the user types into the input field
   handleInputChange = event => {
