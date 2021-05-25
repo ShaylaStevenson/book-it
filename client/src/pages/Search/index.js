@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
-import API from "../../utils/API.js";
+//import API from "../../utils/API.js";
 import SearchForm from "../../components/SearchForm"
 import SearchResultCard from "../../components/SearchResultCard"
 
