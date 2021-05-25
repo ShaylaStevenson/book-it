@@ -42,24 +42,24 @@ class Search extends Component {
     
 
 
-  saveThisBook = () => {
+  // saveThisBook = () => {
     
-      const bookData = {
-        title: this.title,
-        author: this.authors,
-        description: this.description,
-        image: this.image,
-        link: this.link,
-      }
+  //     const bookData = {
+  //       title: this.title,
+  //       author: this.authors,
+  //       description: this.description,
+  //       image: this.image,
+  //       link: this.link,
+  //     }
     
-    API.saveBook(bookData)
-    .then(
-      console.log(bookData)
-    )
-    .catch(err => console.log(err));
+  //   API.saveBook(bookData)
+  //   .then(
+  //     console.log(bookData)
+  //   )
+  //   .catch(err => console.log(err));
       
     
-  }
+  // }
   render() {
     return (
       <div>
