@@ -1,5 +1,7 @@
-import React, { Component, useEffect, useState } from "react";
-//import API from "../../utils/API.js";
+import React, { Component } from "react";
+//, useEffect, useState
+import API from "../../utils/API.js";
+//when API link and everything API related is commented out, it will load to Heroku, but can't do anything
 import SearchForm from "../../components/SearchForm"
 import SearchResultCard from "../../components/SearchResultCard"
 
@@ -8,22 +10,33 @@ class Search extends Component {
   state = {
     searchResults: [],
     search: "",
+    books: []
   };
 
-  // componentDidMount() {
-  //   // When this component mounts, search the Google Books API for ...
-  //   this.searchForBooks("zebras");
-  // };
+  
 
-  // searchForBooks = query => {
-  //   API.searchBooks(query)
-  //     .then((res) => {
-  //       this.setState({ searchResults: res.data.items })
-  //       console.log(res)
-  //       console.log(this.state.searchResults)
-  //     })
-  //     .catch(err => console.log(err));
-  //     };
+  constructor(props) {
+    super(props);
+    this.saveThisBook = this.saveThisBook.bind(this);
+
+    // This binding is necessary to make `this` work in the callback
+    
+  }
+
+  componentDidMount() {
+    // When this component mounts, search the Google Books API for ...
+    this.searchForBooks("zebras");
+  };
+
+  searchForBooks = query => {
+    API.searchBooks(query)
+      .then((res) => {
+        this.setState({ searchResults: res.data.items })
+        console.log(res)
+        console.log(this.state.searchResults)
+      })
+      .catch(err => console.log(err));
+  };
 
   // Handles updating component state when the user types into the input field
   handleInputChange = event => {
@@ -57,9 +70,20 @@ class Search extends Component {
   //     console.log(bookData)
   //   )
   //   .catch(err => console.log(err));
-      
-    
   // }
+
+  saveThisBook(e) {
+    console.log(e)
+    e.preventDefault();
+    console.log(this.state.books)
+    let savedBooks = this.state.books.filter(book => book.id === e.target.id)
+    savedBooks = savedBooks[0];
+    API.saveBook(savedBooks)
+        .then(alert("Your book is saved"))
+        .catch(err => console.log(err));
+    console.log(this.state.books)
+}
+
   render() {
     return (
       <div>
@@ -80,7 +104,7 @@ class Search extends Component {
             link={result.saleInfo.buyLink}
             // add additional properties to display here
           />
-          <button onClick={() => this.saveThisBook()}>Save Book</button>
+          <button id={result.id} onClick={(e) => this.saveThisBook(e)}>Save Book</button>
         </div>
         ))} 
       </div>

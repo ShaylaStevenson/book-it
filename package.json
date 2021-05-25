@@ -39,5 +39,5 @@
     "url": "https://github.com/ShaylaStevenson/book-it/issues"
   },
   "homepage": "https://github.com/ShaylaStevenson/book-it#readme",
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001/"
 }

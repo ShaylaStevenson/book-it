@@ -1,38 +1,49 @@
-import React, { Component, useEffect, useState } from "react";
-//import API from "../../utils/API";
+import React, { Component } from "react";
+//, useEffect, useState
+import API from "../../utils/API";
 import SearchResultCard from "../../components/SearchResultCard"
 // error from Heroku
 // Cannot find file '../../utils/API' in './src/pages/Saved'.
        
 class Saved extends Component {
   state = {
-    savedBooks: []
+    savedBooks: [
+      {
+        title: "The Dead Zone",
+        author: "Stephen King",
+        description:
+          "A number-one national best seller about a man who wakes up from a five-year coma able to see people's futures and the terrible fate awaiting mankind in The Dead Zone - a \"compulsive page-turner\" (The Atlanta Journal-Constitution). Johnny Smith awakens from a five-year coma after his car accident and discovers that he can see people's futures and pasts when he touches them. Many consider his talent a gift; Johnny feels cursed. His fiancée married another man during his coma, and people clamor for him to solve their problems. When Johnny has a disturbing vision after he shakes the hand of an ambitious and amoral politician, he must decide if he should take drastic action to change the future. The Dead Zone is a \"faultlessly paced...continuously engrossing\" (Los Angeles Times) novel of second sight.",
+        image: "https://example.com",
+        link: "https://example.com"
+      }
+    ]
   };
 
-  // componentDidMount() {
-  //   API.getBooks()
-  //   .then((res) => {
-  //     this.setState({ savedBooks: res.data})
-  //     console.log(res)
-  //     console.log(this.state.savedBooks)
-  //   })
-  //   .catch(err => console.log(err));
-  // };
+  componentDidMount() {
+    console.log(this.state.savedBooks)
+    API.getBooks()
+    .then((res) => {
+      this.setState({ savedBooks: res.data})
+      console.log(res)
+      console.log(this.state.savedBooks)
+    })
+    .catch(err => console.log(err));
+  };
 
-  // deleteBook = id => {
-  //   API.deleteBook(id)
-  //   .then(console.log("book deleted"))
-  //   .catch(err => console.log(err));
+  deleteBook = id => {
+    API.deleteBook(id)
+    .then(console.log("book deleted"))
+    //.then(this.componentDidMount())
+    .catch(err => console.log(err));
 
-  //   API.getBooks()
-  //   .then((res) => {
-  //     this.setState({ savedBooks: res.data})
-  //     console.log(res)
-  //     console.log(this.state.savedBooks)
-  //   })
-  //   .catch(err => console.log(err));
-
-  // };
+    API.getBooks()
+    .then((res) => {
+      this.setState({ savedBooks: res.data})
+      console.log(res)
+      console.log(this.state.savedBooks)
+    })
+    .catch(err => console.log(err));
+  };
 
   render() {
     return(
@@ -47,7 +58,8 @@ class Saved extends Component {
               <div className="cardDeck">
               {this.state.savedBooks.map(book => (
                 <div key={book._id}>
-                  <SearchResultCard  
+                  <SearchResultCard
+                    key={book._id}
                     id={book._id}
                     title={book.title}
                     author={book.author}
@@ -60,38 +72,10 @@ class Saved extends Component {
                 </div>
               ))}
           </div>
-              {/* {this.state.savedBooks.map(book => {
-                  
-                    <div className="card" key={book._id}>
-                      <h4>
-                        {book.title} by {book.author}
-                      </h4>
-                      <li>
-                        {book.description}
-                      </li>
-                      <li>
-                        image:
-                        {book.image}
-                      </li>
-                      <li>
-                        {book.link}
-                      </li>
-                      <div className="cardFooter">
-                        <button onClick={() => this.deleteBook(book._id)}>Remove</button>
-                      </div>
-                    </div>
-                
-              })} */}
-              
-               {/* ) : (
-               <h3>No Results to Display</h3>
-             )} */}
         </div>
       </div>
     )
   }
-
-
 };
 
 
