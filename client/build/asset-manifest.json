@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/gentle-tundra-04913.git/static/css/main.7ac7d2be.chunk.css",
-    "main.js": "/gentle-tundra-04913.git/static/js/main.5c534aa8.chunk.js",
-    "main.js.map": "/gentle-tundra-04913.git/static/js/main.5c534aa8.chunk.js.map",
-    "runtime-main.js": "/gentle-tundra-04913.git/static/js/runtime-main.51bbcc11.js",
-    "runtime-main.js.map": "/gentle-tundra-04913.git/static/js/runtime-main.51bbcc11.js.map",
-    "static/css/2.02adba32.chunk.css": "/gentle-tundra-04913.git/static/css/2.02adba32.chunk.css",
-    "static/js/2.be39f15f.chunk.js": "/gentle-tundra-04913.git/static/js/2.be39f15f.chunk.js",
-    "static/js/2.be39f15f.chunk.js.map": "/gentle-tundra-04913.git/static/js/2.be39f15f.chunk.js.map",
-    "index.html": "/gentle-tundra-04913.git/index.html",
-    "precache-manifest.6f559b8abc4594c306379b35e07a5538.js": "/gentle-tundra-04913.git/precache-manifest.6f559b8abc4594c306379b35e07a5538.js",
-    "service-worker.js": "/gentle-tundra-04913.git/service-worker.js",
-    "static/css/2.02adba32.chunk.css.map": "/gentle-tundra-04913.git/static/css/2.02adba32.chunk.css.map",
-    "static/css/main.7ac7d2be.chunk.css.map": "/gentle-tundra-04913.git/static/css/main.7ac7d2be.chunk.css.map",
-    "static/js/2.be39f15f.chunk.js.LICENSE.txt": "/gentle-tundra-04913.git/static/js/2.be39f15f.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.7ac7d2be.chunk.css",
+    "main.js": "/static/js/main.9c32f535.chunk.js",
+    "main.js.map": "/static/js/main.9c32f535.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.08e79cfb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.08e79cfb.js.map",
+    "static/css/2.02adba32.chunk.css": "/static/css/2.02adba32.chunk.css",
+    "static/js/2.addcef51.chunk.js": "/static/js/2.addcef51.chunk.js",
+    "static/js/2.addcef51.chunk.js.map": "/static/js/2.addcef51.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2ff3635605a5d63639fd00b65ead5d80.js": "/precache-manifest.2ff3635605a5d63639fd00b65ead5d80.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.02adba32.chunk.css.map": "/static/css/2.02adba32.chunk.css.map",
+    "static/css/main.7ac7d2be.chunk.css.map": "/static/css/main.7ac7d2be.chunk.css.map",
+    "static/js/2.addcef51.chunk.js.LICENSE.txt": "/static/js/2.addcef51.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.51bbcc11.js",
+    "static/js/runtime-main.08e79cfb.js",
     "static/css/2.02adba32.chunk.css",
-    "static/js/2.be39f15f.chunk.js",
+    "static/js/2.addcef51.chunk.js",
     "static/css/main.7ac7d2be.chunk.css",
-    "static/js/main.5c534aa8.chunk.js"
+    "static/js/main.9c32f535.chunk.js"
   ]
 }

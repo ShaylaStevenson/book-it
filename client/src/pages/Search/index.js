@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //, useEffect, useState
-import API from "../../utils/API.js";
+import API from "../../utils/bookAPI.js";
 //when API link and everything API related is commented out, it will load to Heroku, but can't do anything
 import SearchForm from "../../components/SearchForm"
 import SearchResultCard from "../../components/SearchResultCard"
@@ -12,16 +12,6 @@ class Search extends Component {
     search: "",
     books: []
   };
-
-  
-
-  constructor(props) {
-    super(props);
-    this.saveThisBook = this.saveThisBook.bind(this);
-
-    // This binding is necessary to make `this` work in the callback
-    
-  }
 
   componentDidMount() {
     // When this component mounts, search the Google Books API for ...
@@ -47,42 +37,11 @@ class Search extends Component {
       });
   };
 
-  // When the form is submitted, search the Giphy API for `this.state.search`
+  // When the form is submitted, search the Google API for `this.state.search`
   handleFormSubmit = event => {
     event.preventDefault();
     this.searchForBooks(this.state.search);
   };
-    
-
-
-  // saveThisBook = () => {
-    
-  //     const bookData = {
-  //       title: this.title,
-  //       author: this.authors,
-  //       description: this.description,
-  //       image: this.image,
-  //       link: this.link,
-  //     }
-    
-  //   API.saveBook(bookData)
-  //   .then(
-  //     console.log(bookData)
-  //   )
-  //   .catch(err => console.log(err));
-  // }
-
-  saveThisBook(e) {
-    console.log(e)
-    e.preventDefault();
-    console.log(this.state.books)
-    let savedBooks = this.state.books.filter(book => book.id === e.target.id)
-    savedBooks = savedBooks[0];
-    API.saveBook(savedBooks)
-        .then(alert("Your book is saved"))
-        .catch(err => console.log(err));
-    console.log(this.state.books)
-}
 
   render() {
     return (
@@ -102,9 +61,7 @@ class Search extends Component {
             description={result.volumeInfo.description}
             image={result.volumeInfo.imageLinks.thumbnail}
             link={result.saleInfo.buyLink}
-            // add additional properties to display here
           />
-          <button id={result.id} onClick={(e) => this.saveThisBook(e)}>Save Book</button>
         </div>
         ))} 
       </div>
