@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import {Button} from 'react-bootstrap';
+import {Button, Card, Col, Row} from 'react-bootstrap';
 //Card, 
 import bookAPI from "../../utils/bookAPI";
 
@@ -25,15 +25,32 @@ function SearchResultCard(props) {
   }
 
   return (
-    <div className="card" key={props.id}>
-      <h4>{props.title}</h4>
-      <p><strong>By {props.author}</strong></p>
-      <img alt={props.title} className="book-image" src={props.image} />
-      <p>{props.description}</p>
-      <a href={props.link}> Buy Book </a>
-      <Button variant="danger" onClick = {favoriteBook} >
-        Add to Favorites
-      </Button>
+    <div className="col-lg-4 col-md-6 col-sm"> 
+      <Card key={props.id} className="mb-2 m-0">
+        <Card.Header>
+          <Card.Title>{props.title}</Card.Title>
+          <Card.Subtitle>{props.author}</Card.Subtitle>
+        </Card.Header>
+
+        <Card.Body>
+          <Card.Text>{props.description}</Card.Text>
+        </Card.Body>
+
+        <Card.Footer>
+          <Row>
+            <Col>
+              <Button variant="info" onClick = {favoriteBook} >
+                Add to Favorites
+              </Button>
+            </Col>
+            <Col>
+              <Button variant="success" href={props.link} >
+                Buy Now
+              </Button>
+            </Col>
+          </Row>
+        </Card.Footer>
+      </Card>
     </div>
   );
 }
