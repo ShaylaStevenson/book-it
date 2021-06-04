@@ -1,9 +1,7 @@
 import React from "react";
 import "./style.css";
-import {Button, Card, Col, Row} from 'react-bootstrap';
-//Card, 
+import {Button, Card, CardImg, Col, Row} from 'react-bootstrap';
 import bookAPI from "../../utils/bookAPI";
-
 
 function SearchResultCard(props) {
 
@@ -27,24 +25,27 @@ function SearchResultCard(props) {
   return (
     <div className="col-lg-4 col-md-6 col-sm"> 
       <Card key={props.id} className="mb-2 m-0">
-        <Card.Header>
+        <Card.Header style={{height:"95px"}}>
           <Card.Title>{props.title}</Card.Title>
           <Card.Subtitle>{props.author}</Card.Subtitle>
         </Card.Header>
 
-        <Card.Body>
-          <Card.Text>{props.description}</Card.Text>
-        </Card.Body>
+        <CardImg src={props.image} style={{height:"400px"}}/>
 
-        <Card.Footer>
+        <Card.Body style={{height:"300px"}}>
+              <Card.Text>{props.description}</Card.Text>
+        </Card.Body>
+        
+
+        <Card.Footer style={{height:"95px"}}>
           <Row>
             <Col>
-              <Button variant="info" onClick = {favoriteBook} >
+              <Button variant="info" onClick = {favoriteBook} style={{height:"50px"}}>
                 Add to Favorites
               </Button>
             </Col>
             <Col>
-              <Button variant="success" href={props.link} >
+              <Button variant="success" href={props.link} style={{height:"50px"}}>
                 Buy Now
               </Button>
             </Col>

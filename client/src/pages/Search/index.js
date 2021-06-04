@@ -65,7 +65,7 @@ class Search extends Component {
                     title={result.volumeInfo.title}
                     author={result.volumeInfo.authors}
                     description={result.volumeInfo.description}
-                    image={result.volumeInfo.imageLinks.thumbnail}
+                    image={result.volumeInfo.imageLinks.smallThumbnail}
                     link={result.saleInfo.buyLink}
                   />
                 // </div>
