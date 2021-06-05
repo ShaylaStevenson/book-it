@@ -1,32 +1,53 @@
-# Create React Express App
+# BookIT
 
-## About This Boilerplate
+Love to Read? Want a quick tool to browse books by category? Then link to purchase or save as a favorite? Then try BookIT! BookIT harnesses the power of Google Books API with a Mongo database to help users personalize their virtual bookshelf.git 
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+![demo-image](./src/components/demo-img.png)
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Table of Contents
 
-## Starting the app locally
+  * [Usage](#Usage)
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+  * [Technologies](#Technologies)
 
-```
-npm install
-```
+  * [Links](#Links)
 
-This should install node modules within the server and the client folder.
+  * [License](#License)
+  
+  ## Usage
+  Visit the live app deployed via [Github Pages](http://ShaylaStevenson.github.io/employee-directory)
 
-After both installations complete, run the following command in your terminal:
+  ## Technologies
+   * [Randomuser API](https://randomuser.me/)
+   * [Axios](https://www.npmjs.com/package/axios)
+   * [Bootstrap](https://getbootstrap.com/)
+   * [React](https://www.npmjs.com/package/react)
+   * [React-router-dom](https://www.npmjs.com/package/react-router-dom)
+   * [Dateformat](https://www.npmjs.com/package/dateformat)
 
-```
-npm start
-```
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+  ## Links
+  *  Go to Employee Directory [Github Repository](https://github.com/ShaylaStevenson/employee-directory)
+  * View My [Github Profile](https://github.com/ShaylaStevenson)
+  * You can also reach me through my [LinkedIn account](https://www.linkedin.com/in/shayla-stevenson-806143200/) .
 
-## Deployment (Heroku)
+  ## License
+  This project is licensed under the terms of the MIT license. View license at:
+  https://opensource.org/licenses/MIT.
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Google Books Search
