@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import bookAPI from "../../utils/bookAPI";
-//import SearchResultCard from "../../components/SearchResultCard"
+import SearchResultCard from "../../components/SearchResultCard"
 import {Card, Button, CardDeck} from 'react-bootstrap';
        
 function Saved() {

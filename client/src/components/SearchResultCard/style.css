@@ -2,3 +2,13 @@
     height:200px;
     width:200px
 }
+
+.card-body-style {
+    height: 300px;
+}
+
+.card-text-style {
+    height:280px;
+    overflow-y: scroll;
+    padding: 10px;
+}

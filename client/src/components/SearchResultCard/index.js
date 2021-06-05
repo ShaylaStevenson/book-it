@@ -24,7 +24,7 @@ function SearchResultCard(props) {
 
   return (
     <div className="col-lg-4 col-md-6 col-sm"> 
-      <Card key={props.id} className="mb-2 m-0">
+      <Card id="card-style" key={props.id} className="mb-2 m-0">
         <Card.Header style={{height:"95px"}}>
           <Card.Title>{props.title}</Card.Title>
           <Card.Subtitle>{props.author}</Card.Subtitle>
@@ -32,8 +32,8 @@ function SearchResultCard(props) {
 
         <CardImg src={props.image} style={{height:"400px"}}/>
 
-        <Card.Body style={{height:"300px"}}>
-              <Card.Text>{props.description}</Card.Text>
+        <Card.Body className="card-body-style">
+              <Card.Text className="card-text-style">{props.description}</Card.Text>
         </Card.Body>
         
 
