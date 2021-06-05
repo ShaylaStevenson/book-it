@@ -1,12 +1,17 @@
 # BookIT
 
-Love to Read? Want a quick tool to browse books by category? Then link to purchase or save as a favorite? Then try BookIT! BookIT harnesses the power of Google Books API with a Mongo database to help users personalize their virtual bookshelf.git 
+Love to Read? Want a quick tool to browse books by category? Then link to purchase or save as a favorite? Then try BookIT! BookIT harnesses the power of Google Books API with a Mongo database to help users personalize their virtual bookshelf.
 
-![demo-image](./src/components/demo-img.png)
+NOTE TO GRADER:
+Well, I tried! On my local host I am able to search for books, return results, and save books to a favorites page. Unfortunately, upon final Heroku deployment, my app is not deploying with the current code. Somehow it seems to be stuck on a test deployment from several days ago.
+My problems may be able to be resolved with a new Heroku application, but I want to make sure I at least turn in my Github Repo so that you can see my efforts (and some successes!)
+
+
+![demo-image](./client/public/demo.png)
+![demo-image](./client/public/demo-3.png)
+![demo-image](./client/public/demo-2.png)
 
 ## Table of Contents
-
-  * [Usage](#Usage)
 
   * [Technologies](#Technologies)
 
@@ -14,20 +19,20 @@ Love to Read? Want a quick tool to browse books by category? Then link to purcha
 
   * [License](#License)
   
-  ## Usage
-  Visit the live app deployed via [Github Pages](http://ShaylaStevenson.github.io/employee-directory)
 
   ## Technologies
-   * [Randomuser API](https://randomuser.me/)
+   * [GoogleBooks API](https://developers.google.com/books)
    * [Axios](https://www.npmjs.com/package/axios)
    * [Bootstrap](https://getbootstrap.com/)
    * [React](https://www.npmjs.com/package/react)
    * [React-router-dom](https://www.npmjs.com/package/react-router-dom)
    * [Dateformat](https://www.npmjs.com/package/dateformat)
+   * [Mongo](https://www.mongodb.com/)
 
 
   ## Links
-  *  Go to Employee Directory [Github Repository](https://github.com/ShaylaStevenson/employee-directory)
+  * Visit the live app deployed via [Heroku](https://gentle-tundra-04913.herokuapp.com/)
+  * Go to BookIT [Github Repository](https://github.com/ShaylaStevenson/book-it)
   * View My [Github Profile](https://github.com/ShaylaStevenson)
   * You can also reach me through my [LinkedIn account](https://www.linkedin.com/in/shayla-stevenson-806143200/) .
 
