@@ -24,7 +24,7 @@ function SearchResultCard(props) {
 
   return (
     <div className="col-lg-4 col-md-6 col-sm"> 
-      <Card id="card-style" key={props.id} className="mb-2 m-0">
+      <Card key={props.id} className="mb-2 m-0">
         <Card.Header style={{height:"95px"}}>
           <Card.Title>{props.title}</Card.Title>
           <Card.Subtitle>{props.author}</Card.Subtitle>
@@ -46,7 +46,7 @@ function SearchResultCard(props) {
             </Col>
             <Col>
               <Button variant="success" href={props.link} style={{height:"50px"}}>
-                Buy Now
+                More Info
               </Button>
             </Col>
           </Row>
